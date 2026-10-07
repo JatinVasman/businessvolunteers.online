@@ -222,6 +222,19 @@ function getRouteMetadata(routePath) {
     };
   }
 
+  if (first === 'payment') {
+    return {
+      ...defaultMeta,
+      title: 'Pay Online — UPI QR Code & Official Bank Transfer Details | Business Volunteers',
+      description: 'Official payment portal for Business Volunteers. Pay retainers and invoices securely via PhonePe, Google Pay, BHIM, UPI QR, or direct Union Bank of India transfer.',
+      h1: 'Make a Payment to Business Volunteers',
+      faqItems: [
+        { q: 'How fast is payment verified?', a: 'UPI and IMPS payments settle immediately. We acknowledge receipt within 15-30 minutes.' },
+        { q: 'Do you issue a GST invoice?', a: 'Yes, full tax invoice with your company GSTIN is provided.' }
+      ]
+    };
+  }
+
   return defaultMeta;
 }
 

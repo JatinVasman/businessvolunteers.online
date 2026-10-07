@@ -39,6 +39,7 @@ import { GraphicDetailPage } from './pages/GraphicDetailPage';
 import { GraphicItemDetailPage } from './pages/GraphicItemDetailPage';
 import { LocationsDirectoryPage } from './pages/LocationsDirectoryPage';
 import { HtmlSitemapPage } from './pages/HtmlSitemapPage';
+import { PaymentPage } from './pages/PaymentPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { updatePageSeo } from './utils/seoManager';
 import { parseRoute, getRoutePath } from './utils/routes';
@@ -412,6 +413,13 @@ export const App: React.FC = () => {
           <HtmlSitemapPage
             onNavigate={handleNavigate}
             onOpenStrategyModal={handleOpenStrategyModal}
+          />
+        )}
+
+        {activePage === 'payment' && (
+          <PaymentPage
+            onNavigate={handleNavigate}
+            onOpenContactModal={() => { setContactModalService(''); setIsContactModalOpen(true); }}
           />
         )}
 

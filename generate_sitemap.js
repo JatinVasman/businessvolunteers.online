@@ -31,6 +31,7 @@ addUrl('/smm', 'weekly', '0.9');
 addUrl('/legal', 'monthly', '0.8');
 addUrl('/digital-marketing', 'weekly', '0.9');
 addUrl('/graphic-design', 'weekly', '0.9');
+addUrl('/payment', 'monthly', '0.8');
 
 // 2. All 17 Detailed Service Pages
 const services = [

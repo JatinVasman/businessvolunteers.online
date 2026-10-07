@@ -128,6 +128,9 @@ export function parseRoute(pathname: string, search: string): RouteInfo {
         return { page: 'graphic-details', slug: idParam || undefined };
       case 'design-item':
         return { page: 'design-item', slug: idParam || undefined };
+      case 'payment':
+      case 'pay':
+        return { page: 'payment' };
       default:
         return { page: pageParam as PageView, slug: idParam || undefined };
     }
@@ -258,6 +261,10 @@ export function parseRoute(pathname: string, search: string): RouteInfo {
     return { page: 'design-item', slug: second };
   }
 
+  if (first === 'payment' || first === 'pay') {
+    return { page: 'payment' };
+  }
+
   if (first === '404' || first === 'not-found') {
     return { page: '404' };
   }
@@ -338,6 +345,8 @@ export function getRoutePath(page: PageView, slug?: string): string {
       const cleanSlug = slug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
       return `/graphic-design/${cleanSlug}`;
     }
+    case 'payment':
+      return '/payment';
     case '404':
       return '/404';
     default:

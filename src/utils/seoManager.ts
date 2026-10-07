@@ -165,6 +165,11 @@ export function resolveSeoMetadata(page: PageView, slug?: string, context?: SeoD
       break;
     }
 
+    case 'payment':
+      seo = STATIC_PAGES_SEO['/payment'];
+      breadcrumbs.push({ name: 'Pay Online', path: '/payment' });
+      break;
+
     case '404':
       seo = STATIC_PAGES_SEO['/404'];
       break;

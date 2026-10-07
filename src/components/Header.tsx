@@ -336,7 +336,70 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Right Header Actions */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexShrink: 0 }}>
+            {/* Direct Pay Online Button (Desktop) */}
+            <a
+              href="/payment"
+              onClick={(e) => { e.preventDefault(); onNavigate('payment'); }}
+              className="desktop-nav-only"
+              style={{
+                display: isMobileScreen ? 'none' : 'inline-flex',
+                alignItems: 'center',
+                gap: '0.45rem',
+                backgroundColor: activePage === 'payment' ? 'var(--primary)' : 'rgba(255, 78, 39, 0.08)',
+                color: activePage === 'payment' ? '#FFFFFF' : '#FF4E27',
+                border: '1.5px solid rgba(255, 78, 39, 0.4)',
+                padding: '0.45rem 1.05rem',
+                borderRadius: '999px',
+                fontSize: '0.825rem',
+                fontWeight: 800,
+                cursor: 'pointer',
+                transition: 'all 0.25s ease',
+                textDecoration: 'none',
+                boxShadow: activePage === 'payment' ? '0 4px 14px rgba(255, 78, 39, 0.35)' : 'none',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#FF4E27';
+                e.currentTarget.style.color = '#FFFFFF';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(255, 78, 39, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = activePage === 'payment' ? 'var(--primary)' : 'rgba(255, 78, 39, 0.08)';
+                e.currentTarget.style.color = activePage === 'payment' ? '#FFFFFF' : '#FF4E27';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = activePage === 'payment' ? '0 4px 14px rgba(255, 78, 39, 0.35)' : 'none';
+              }}
+            >
+              <span>💳</span>
+              <span>Pay Online</span>
+            </a>
 
+            {/* MOBILE COMPACT PAY BUTTON (PHONES <= 768px) */}
+            {isMobileScreen && (
+              <a
+                href="/payment"
+                onClick={(e) => { e.preventDefault(); onNavigate('payment'); }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem',
+                  backgroundColor: activePage === 'payment' ? 'var(--primary)' : 'rgba(255, 78, 39, 0.1)',
+                  color: activePage === 'payment' ? '#FFFFFF' : '#FF4E27',
+                  border: '1px solid rgba(255, 78, 39, 0.35)',
+                  padding: '0.4rem 0.85rem',
+                  borderRadius: '999px',
+                  fontSize: '0.78rem',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                  minHeight: '36px',
+                  lineHeight: 1,
+                  boxShadow: activePage === 'payment' ? '0 3px 10px rgba(255, 78, 39, 0.3)' : 'none',
+                }}
+              >
+                <span>💳</span>
+                <span>Pay</span>
+              </a>
+            )}
 
             {/* MOBILE HAMBURGER MENU BUTTON (STRICTLY MOBILE PHONES <= 768px) */}
             {isMobileScreen && (
@@ -450,6 +513,18 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleMobileNav('contact')}
                 >
                   <span>Contact</span>
+                </button>
+
+                <button
+                  className={`mobile-drawer-link ${activePage === 'payment' ? 'active' : ''}`}
+                  onClick={() => handleMobileNav('payment')}
+                  style={{
+                    backgroundColor: activePage === 'payment' ? 'var(--primary)' : 'rgba(255, 78, 39, 0.08)',
+                    color: activePage === 'payment' ? '#FFFFFF' : '#FF4E27',
+                    fontWeight: 800,
+                  }}
+                >
+                  <span>💳 Pay Online (UPI / Bank)</span>
                 </button>
               </div>
 

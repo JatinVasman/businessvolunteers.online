@@ -134,6 +134,16 @@ export const STATIC_PAGES_SEO: Record<string, PageSeoMeta> = {
     searchIntent: 'Commercial / Transactional — Ordering graphic designs with clear per-unit rates',
     primaryKeyword: 'graphic design services'
   },
+  '/payment': {
+    title: 'Pay Online — UPI QR Code & Official Bank Transfer Details | Business Volunteers',
+    description: 'Official payment portal for Business Volunteers. Pay retainers and invoices securely via PhonePe, Google Pay, BHIM, UPI QR, or direct Union Bank of India transfer.',
+    keywords: ['business volunteers payment', 'pay business volunteers', 'upi qr payment', 'union bank of india', 'bank transfer details', 'pay online'],
+    canonicalPath: '/payment',
+    h1: 'Make a Payment to Business Volunteers',
+    ogType: 'website',
+    searchIntent: 'Transactional — Completing payment for agency services and milestone invoices',
+    primaryKeyword: 'business volunteers payment'
+  },
   '/404': {
     title: '404 - Page Not Found | Business Volunteers',
     description: 'The requested page could not be found. Explore our services, industry marketing hubs, blogs, or contact our team.',

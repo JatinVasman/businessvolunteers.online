@@ -26,6 +26,7 @@ export const HtmlSitemapPage: React.FC<HtmlSitemapPageProps> = ({ onNavigate, on
     { title: 'All Domestic & Global Locations', path: '/digital-marketing', page: 'all-locations' as PageView },
     { title: 'Insights & Strategy Blog Library', path: '/blogs', page: 'blog' as PageView },
     { title: 'Contact Founders & Book Strategy Call', path: '/contact', page: 'contact' as PageView },
+    { title: 'Payment Portal — UPI QR & Bank Transfer', path: '/payment', page: 'payment' as PageView },
   ];
 
   const filteredServices = useMemo(() => {

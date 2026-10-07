@@ -1,4 +1,4 @@
-export type PageView = 'home' | 'services' | 'smm' | 'industries' | 'portfolio' | 'blog' | 'blog-post' | 'about' | 'location' | 'all-locations' | 'legal' | 'contact' | 'legal-details' | 'service-details' | 'graphic-details' | 'design-item' | 'html-sitemap' | '404';
+export type PageView = 'home' | 'services' | 'smm' | 'industries' | 'portfolio' | 'blog' | 'blog-post' | 'about' | 'location' | 'all-locations' | 'legal' | 'contact' | 'legal-details' | 'service-details' | 'graphic-details' | 'design-item' | 'html-sitemap' | 'payment' | '404';
 
 export type Currency = 'INR' | 'USD' | 'EUR';
 

@@ -62,6 +62,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectLocation, on
               <li><a href="/blogs" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}>Blog Articles</a></li>
               <li><a href="/smm" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('smm'); }}>Social Growth (SMM)</a></li>
               <li><a href="/contact" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}>Contact Us</a></li>
+              <li><a href="/payment" style={{ color: '#FF4E27', textDecoration: 'none', fontWeight: 700 }} onClick={(e) => { e.preventDefault(); onNavigate('payment'); }}>💳 Pay Online (UPI / Bank)</a></li>
             </ul>
           </div>
 
@@ -84,6 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectLocation, on
               <div>📍 <strong>Delhi NCR:</strong> New Ashok Nagar, Delhi, 110096, India</div>
               <div>📞 +91 85869 89832</div>
               <div>✉️ <a href="#contact" onClick={(e) => { e.preventDefault(); if (onOpenContactModal) onOpenContactModal(); }} style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease', cursor: 'pointer' }} onMouseEnter={(e) => e.currentTarget.style.color = '#3B82F6'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>contact.businessvolunteers@gmail.com</a></div>
+              <div>💳 <a href="/payment" onClick={(e) => { e.preventDefault(); onNavigate('payment'); }} style={{ color: '#FF4E27', textDecoration: 'none', fontWeight: 700, transition: 'opacity 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '0.85'} onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>Pay Online / Invoicing Details →</a></div>
               <a
                 href="https://wa.me/918586989832?text=Hi%2C%20I%20am%20interested%20in%20your%20services"
                 target="_blank"
@@ -293,6 +295,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectLocation, on
               onMouseLeave={(e) => e.currentTarget.style.color = '#E2E8F0'}
             >
               Legal & Compliance
+            </a>
+            <a
+              href="/payment"
+              onClick={(e) => { e.preventDefault(); onNavigate('payment'); }}
+              style={{ color: '#FF4E27', textDecoration: 'none', fontWeight: 700, transition: 'color 0.2s' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#FFFFFF'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#FF4E27'}
+            >
+              💳 Pay Online
             </a>
           </div>
         </div>

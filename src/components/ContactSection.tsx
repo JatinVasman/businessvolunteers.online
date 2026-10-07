@@ -315,6 +315,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ backgroundColor,
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>Mon – Sat: 09:00 AM – 06:00 PM IST • Guaranteed response within 2 hours</div>
               </div>
             </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'var(--bg-card)', border: '1.5px solid rgba(255, 78, 39, 0.35)', borderRadius: '14px', padding: '1.25rem', boxShadow: 'var(--shadow-sm)' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(255, 78, 39, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>💳</div>
+              <div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Online Payment & Invoicing</div>
+                <a href="/payment" style={{ fontWeight: 800, color: 'var(--primary)', textDecoration: 'none', fontSize: '0.92rem' }}>
+                  Pay via UPI QR & Bank Transfer ➔
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
