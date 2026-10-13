@@ -110,7 +110,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
       `• UTR / Reference ID: ${utrForm.utrNumber || '[12-Digit Transaction ID]'}\n` +
       `• Method: ${utrForm.paymentMethod}\n` +
       `• Service: ${utrForm.serviceName || '[SEO / Web / Retainer]'}\n\n` +
-      `Kindly share the GST invoice & payment receipt. Thank you!`
+      `Kindly share the payment receipt. Thank you!`
     );
     return `https://wa.me/918586989832?text=${text}`;
   };
@@ -270,7 +270,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
               </span>
               <span className="payment-gateway-badge__dot">•</span>
               <span className="payment-gateway-badge__part">
-                <span>100% SECURE & GST COMPLIANT</span>
+                <span>100% SECURE & VERIFIED</span>
               </span>
             </div>
 
@@ -340,8 +340,8 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
             >
               <div style={{ fontSize: '1.4rem', color: '#F59E0B', flexShrink: 0 }}>🧾</div>
               <div>
-                <div className="payment-pillar-title" style={{ fontWeight: 800, fontSize: '0.9rem', color: 'var(--secondary)' }}>GST Tax Invoicing</div>
-                <div className="payment-pillar-desc" style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Official receipt with GSTIN input</div>
+                <div className="payment-pillar-title" style={{ fontWeight: 800, fontSize: '0.9rem', color: 'var(--secondary)' }}>Official Invoicing</div>
+                <div className="payment-pillar-desc" style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Instant payment confirmation & receipt</div>
               </div>
             </div>
 
@@ -668,7 +668,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
               </div>
 
               <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                Transfer directly from your net banking portal or mobile banking app. Ideal for retainers, milestone settlements, and GST expense claims.
+                Transfer directly from your net banking portal or mobile banking app. Ideal for retainers, project milestones, and business settlements.
               </p>
 
               {/* Bank Data Rows with One-Click Copy */}
@@ -888,10 +888,10 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
                 marginBottom: '0.65rem',
               }}
             >
-              Confirm Your Payment & Receive GST Invoice
+              Confirm Your Payment & Receive Official Receipt
             </h2>
             <p style={{ fontSize: '0.925rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
-              Share your 12-digit UTR or transaction ID so our accounting team can reconcile your transfer within 15–30 minutes and issue your official tax invoice receipt.
+              Share your 12-digit UTR or transaction ID so our accounting team can reconcile your transfer within 15–30 minutes and issue your official payment receipt.
             </p>
           </div>
 
@@ -959,7 +959,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
               >
                 <div>📱 <strong>Accounts Helpline:</strong> +91 85869 89832</div>
                 <div style={{ marginTop: '0.25rem' }}>⏱️ <strong>Typical Response:</strong> &lt; 15 Minutes</div>
-                <div style={{ marginTop: '0.25rem' }}>📄 <strong>Receipt Format:</strong> Digitally Signed GST PDF</div>
+                <div style={{ marginTop: '0.25rem' }}>📄 <strong>Receipt Format:</strong> Digitally Signed PDF Receipt</div>
               </div>
 
               <a
@@ -1002,7 +1002,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
                 Online UTR Submission Form
               </h3>
               <p style={{ fontSize: '0.825rem', color: 'var(--text-muted)', marginBottom: '1.25rem' }}>
-                Fill out your transaction reference and we will email your tax receipt.
+                Fill out your transaction reference and we will email your payment receipt.
               </p>
 
               {submitSuccess ? (
@@ -1084,7 +1084,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
 
                     <div>
                       <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, marginBottom: '0.25rem', color: 'var(--secondary)' }}>
-                        Email (For GST Invoice) *
+                        Email (For Payment Receipt) *
                       </label>
                       <input
                         type="email"
@@ -1212,7 +1212,7 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
               Payment & Invoicing FAQ
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              Everything you need to know about agency settlements, GST billing, and security.
+              Everything you need to know about agency settlements, billing, and security.
             </p>
           </div>
 
@@ -1223,8 +1223,8 @@ Timestamp: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
                 a: 'UPI payments and IMPS transfers settle instantly. Once you notify us via WhatsApp or submit your 12-digit UTR above, our finance desk acknowledges receipt within 15–30 minutes during business hours (Mon–Sat 09:00 AM – 06:00 PM IST).',
               },
               {
-                q: 'Will I receive a GST compliant tax invoice?',
-                a: 'Yes, 100%. Business Volunteers issues official tax invoices containing our registered GSTIN and your business GSTIN so you can seamlessly claim full Input Tax Credit (ITC).',
+                q: 'Will I receive an official payment receipt & invoice?',
+                a: 'Yes, Business Volunteers issues official digital payment receipts and invoices for all payments, retainers, and completed project milestones.',
               },
               {
                 q: 'Are there any extra transaction convenience fees or hidden charges?',
