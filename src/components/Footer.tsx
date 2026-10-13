@@ -59,6 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectLocation, on
               <li><a href="/" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('home'); }}>Home</a></li>
               <li><a href="/about" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('about'); }}>About Us</a></li>
               <li><a href="/portfolio" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('portfolio'); }}>Our Work</a></li>
+              <li><a href="/tools" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('tools'); }}>🛠️ Free Business Tools (106+)</a></li>
               <li><a href="/blogs" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}>Blog Articles</a></li>
               <li><a href="/smm" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('smm'); }}>Social Growth (SMM)</a></li>
               <li><a href="/contact" style={{ color: 'inherit', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}>Contact Us</a></li>

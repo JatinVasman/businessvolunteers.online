@@ -64,6 +64,16 @@ export const STATIC_PAGES_SEO: Record<string, PageSeoMeta> = {
     searchIntent: 'Commercial / Proof — Evaluating agency track record and ROI results',
     primaryKeyword: 'digital marketing case studies'
   },
+  '/tools': {
+    title: '106 Free Online Business, Marketing & Seller Tools | Business Volunteers',
+    description: '106 free online utilities: GST and profit calculators, Amazon & Flipkart shipping label croppers, PDF editors, image converters, and QR generators.',
+    keywords: ['free business tools', 'seller label cropper', 'gst calculator online', 'free pdf tools', 'qr code generator', 'ecommerce calculator', 'marketing utilities'],
+    canonicalPath: '/tools',
+    h1: '106 Free Online Business & Growth Utilities',
+    ogType: 'website',
+    searchIntent: 'Informational / Utility — Free browser-first business and e-commerce tools',
+    primaryKeyword: 'free business tools'
+  },
   '/industries': {
     title: '89+ Industry Digital Marketing & Growth Solutions | Business Volunteers',
     description: 'Specialized digital marketing, SEO, and lead generation frameworks tailored for 89+ industries including Healthcare, Real Estate, E-Commerce, Education, and Tech.',

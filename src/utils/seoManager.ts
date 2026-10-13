@@ -11,6 +11,7 @@ import {
 } from './seoConfig';
 import { SERVICE_ID_TO_SLUG, getRoutePath } from './routes';
 import { getServiceBySlug } from '../data/servicesData';
+import { getToolById } from '../data/toolsData';
 
 export interface SeoDynamicContext {
   title?: string;
@@ -95,6 +96,35 @@ export function resolveSeoMetadata(page: PageView, slug?: string, context?: SeoD
       seo = STATIC_PAGES_SEO['/portfolio'];
       breadcrumbs.push({ name: 'Our Work', path: '/portfolio' });
       break;
+
+    case 'tools': {
+      if (slug) {
+        const tool = getToolById(slug);
+        seo = {
+          title: tool ? `${tool.name} — Free Online Tool | Business Volunteers` : 'Free Online Business Tools | Business Volunteers',
+          description: tool ? tool.description : 'Free online business, marketing, e-commerce, and developer tools.',
+          keywords: tool ? [tool.name.toLowerCase(), tool.badge.toLowerCase(), 'free online tool'] : ['free business tools', 'online utilities'],
+          canonicalPath: `/tools/${slug}`,
+          h1: tool ? tool.name : 'Free Online Tools',
+          ogType: 'website',
+          primaryKeyword: tool ? tool.name.toLowerCase() : 'free business tools'
+        };
+        breadcrumbs.push({ name: 'Tools', path: '/tools' });
+        breadcrumbs.push({ name: tool ? tool.name : slug, path: `/tools/${slug}` });
+      } else {
+        seo = STATIC_PAGES_SEO['/tools'] || {
+          title: '106 Free Online Business, Marketing & Seller Tools | Business Volunteers',
+          description: '106 free online utilities: GST and profit calculators, Amazon & Flipkart shipping label croppers, PDF editors, image converters, and QR generators.',
+          keywords: ['free business tools', 'seller label cropper', 'gst calculator online', 'free pdf tools'],
+          canonicalPath: '/tools',
+          h1: '106 Free Online Business & Growth Utilities',
+          ogType: 'website',
+          primaryKeyword: 'free business tools'
+        };
+        breadcrumbs.push({ name: 'Tools', path: '/tools' });
+      }
+      break;
+    }
 
     case 'industries': {
       if (slug) {

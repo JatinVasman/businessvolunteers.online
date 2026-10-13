@@ -310,6 +310,14 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
 
             <a
+              href="/tools"
+              onClick={(e) => { e.preventDefault(); onNavigate('tools'); }}
+              className={`nav-link-item ${activePage === 'tools' ? 'active' : ''}`}
+            >
+              Tools
+            </a>
+
+            <a
               href="/blogs"
               onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}
               className={`nav-link-item ${activePage === 'blog' ? 'active' : ''}`}
@@ -478,6 +486,13 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleMobileNav('portfolio')}
                 >
                   <span>Portfolio</span>
+                </button>
+
+                <button
+                  className={`mobile-drawer-link ${activePage === 'tools' ? 'active' : ''}`}
+                  onClick={() => handleMobileNav('tools')}
+                >
+                  <span>🛠️ Free Tools (106+)</span>
                 </button>
 
                 <button

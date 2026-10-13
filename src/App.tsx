@@ -41,6 +41,7 @@ import { LocationsDirectoryPage } from './pages/LocationsDirectoryPage';
 import { HtmlSitemapPage } from './pages/HtmlSitemapPage';
 import { PaymentPage } from './pages/PaymentPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { ToolsPage } from './pages/ToolsPage';
 import { updatePageSeo } from './utils/seoManager';
 import { parseRoute, getRoutePath } from './utils/routes';
 
@@ -73,6 +74,7 @@ export const App: React.FC = () => {
   const [selectedIndustryId, setSelectedIndustryId] = useState<string>('');
   const [selectedGraphicCat, setSelectedGraphicCat] = useState<string>('');
   const [selectedDesignItem, setSelectedDesignItem] = useState<string>('');
+  const [selectedToolSlug, setSelectedToolSlug] = useState<string>('');
 
   useEffect(() => {
     const syncRoute = () => {
@@ -84,6 +86,8 @@ export const App: React.FC = () => {
         setSelectedServiceId(slug);
       } else if (page === 'industries') {
         setSelectedIndustryId(slug || '');
+      } else if (page === 'tools') {
+        setSelectedToolSlug(slug || '');
       } else if (page === 'about') {
         if (slug) {
           const lower = slug.toLowerCase();
@@ -133,10 +137,11 @@ export const App: React.FC = () => {
       activePage === 'legal-details' ? selectedLegalServiceTitle :
       activePage === 'graphic-details' ? selectedGraphicCat :
       activePage === 'design-item' ? selectedDesignItem :
-      activePage === 'industries' ? selectedIndustryId : undefined;
+      activePage === 'industries' ? selectedIndustryId :
+      activePage === 'tools' ? selectedToolSlug : undefined;
 
     updatePageSeo(activePage, activeSlug);
-  }, [activePage, selectedLocation, selectedBlogSlug, selectedServiceId, selectedLegalServiceTitle, selectedGraphicCat, selectedDesignItem, selectedIndustryId]);
+  }, [activePage, selectedLocation, selectedBlogSlug, selectedServiceId, selectedLegalServiceTitle, selectedGraphicCat, selectedDesignItem, selectedIndustryId, selectedToolSlug]);
 
   const handleThemeToggle = () => {
     const nextTheme = theme === 'light' ? 'dark' : 'light';
@@ -153,6 +158,9 @@ export const App: React.FC = () => {
     }
     if (page === 'industries') {
       setSelectedIndustryId(slug || '');
+    }
+    if (page === 'tools') {
+      setSelectedToolSlug(slug || '');
     }
     if (page === 'graphic-details' && slug) {
       setSelectedGraphicCat(slug);
@@ -331,6 +339,14 @@ export const App: React.FC = () => {
 
         {activePage === 'portfolio' && (
           <PortfolioPage
+            onNavigate={handleNavigate}
+            onOpenStrategyModal={handleOpenStrategyModal}
+          />
+        )}
+
+        {activePage === 'tools' && (
+          <ToolsPage
+            toolSlug={selectedToolSlug}
             onNavigate={handleNavigate}
             onOpenStrategyModal={handleOpenStrategyModal}
           />

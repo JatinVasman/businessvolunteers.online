@@ -114,6 +114,9 @@ export function parseRoute(pathname: string, search: string): RouteInfo {
         return { page: 'industries', slug: idParam || undefined };
       case 'portfolio':
         return { page: 'portfolio' };
+      case 'tools':
+      case 'tool':
+        return { page: 'tools', slug: idParam || undefined };
       case 'smm':
         return { page: 'smm' };
       case 'legal':
@@ -184,6 +187,10 @@ export function parseRoute(pathname: string, search: string): RouteInfo {
 
   if (first === 'portfolio' || first === 'our-work' || first === 'work') {
     return { page: 'portfolio' };
+  }
+
+  if (first === 'tools' || first === 'tool') {
+    return { page: 'tools', slug: second || undefined };
   }
 
   if (first === 'smm' || first === 'social-media-marketing') {
@@ -314,6 +321,11 @@ export function getRoutePath(page: PageView, slug?: string): string {
     }
     case 'portfolio':
       return '/portfolio';
+    case 'tools': {
+      if (!slug) return '/tools';
+      const cleanSlug = slug.toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-|-$/g, '');
+      return `/tools/${cleanSlug}`;
+    }
     case 'smm':
       return '/smm';
     case 'legal':
