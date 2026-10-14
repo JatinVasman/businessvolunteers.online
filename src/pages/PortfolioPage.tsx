@@ -186,7 +186,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onNavigate, onOpen
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', maxWidth: '1140px', margin: '0 auto 3rem auto' }}>
           {[
             { 
-              value: '40+', 
+              value: '45+', 
               label: 'Brands Transformed', 
               icon: '💎',
               bg: 'linear-gradient(135deg, #E0F2FE 0%, #C7D2FE 100%)',

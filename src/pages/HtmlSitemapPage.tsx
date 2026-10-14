@@ -20,6 +20,7 @@ export const HtmlSitemapPage: React.FC<HtmlSitemapPageProps> = ({ onNavigate, on
     { title: 'All Services & Growth Capabilities', path: '/services', page: 'services' as PageView },
     { title: '89+ Industry Marketing Frameworks', path: '/industries', page: 'industries' as PageView },
     { title: 'Client Portfolio & Case Studies', path: '/portfolio', page: 'portfolio' as PageView },
+    { title: '106 Free Business, E-Commerce & Marketing Tools', path: '/tools', page: 'tools' as PageView },
     { title: 'Social Media Marketing (SMM) Engine', path: '/smm', page: 'smm' as PageView },
     { title: 'Graphic Design Studio & Catalog', path: '/graphic-design', page: 'graphic-details' as PageView },
     { title: 'Legal & Practice Area Solutions', path: '/legal', page: 'legal' as PageView },

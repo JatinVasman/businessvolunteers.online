@@ -30,10 +30,20 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
         tool.description.toLowerCase().includes(q) ||
         tool.categoryLabel.toLowerCase().includes(q) ||
         tool.badge.toLowerCase().includes(q) ||
-        tool.id.toLowerCase().includes(q)
+        tool.id.toLowerCase().includes(q) ||
+        tool.keywords?.some(k => k.toLowerCase().includes(q))
       );
     });
   }, [searchQuery, selectedCategory]);
+
+  // Update SEO Title and Description dynamically
+  React.useEffect(() => {
+    if (activeTool) {
+      document.title = activeTool.seoTitle || `${activeTool.name} — Business Volunteers`;
+    } else {
+      document.title = '106 Free Business, E-Commerce & Marketing Tools | Business Volunteers';
+    }
+  }, [activeTool]);
 
   const relatedTools = useMemo(() => {
     if (!activeTool) return [];
@@ -99,6 +109,12 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
               <p style={{ fontSize: '1.05rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
                 {activeTool.description}
               </p>
+
+              {/* Privacy trust badge */}
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', marginTop: '1.1rem', backgroundColor: '#ECFDF5', border: '1px solid #A7F3D0', padding: '0.35rem 0.85rem', borderRadius: '999px', fontSize: '0.8rem', color: '#065F46', fontWeight: 700 }}>
+                <span>🛡️</span>
+                <span>100% Client-Side &amp; Private • Zero Server Uploads • Fast &amp; Free</span>
+              </div>
             </div>
           </div>
         </section>
@@ -107,6 +123,44 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
         <div className="container" style={{ marginTop: '2.5rem' }}>
           <ToolRunner tool={activeTool} />
         </div>
+
+        {/* FAQ ACCORDION SECTION */}
+        {activeTool.faq && activeTool.faq.length > 0 && (
+          <div className="container" style={{ marginTop: '4rem' }}>
+            <div style={{ maxWidth: '850px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#FF4E27', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>
+                <span>💡</span> FREQUENTLY ASKED QUESTIONS
+              </div>
+              <h3 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '1.5rem', fontWeight: 900, color: '#0B132A', marginBottom: '1.25rem' }}>
+                Common Questions about {activeTool.name}
+              </h3>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {activeTool.faq.map((item, idx) => (
+                  <details
+                    key={idx}
+                    style={{
+                      background: '#FFFFFF',
+                      border: '1.5px solid #E2E8F0',
+                      borderRadius: '14px',
+                      padding: '1.1rem 1.25rem',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
+                    }}
+                  >
+                    <summary style={{ fontWeight: 800, fontSize: '0.975rem', color: '#0B132A', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span>{item.question}</span>
+                      <span style={{ color: '#FF4E27', fontSize: '1.25rem', fontWeight: 900, marginLeft: '0.5rem' }}>+</span>
+                    </summary>
+                    <p style={{ marginTop: '0.75rem', marginBottom: 0, fontSize: '0.9rem', color: '#64748B', lineHeight: 1.6 }}>
+                      {item.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* RELATED TOOLS CAROUSEL */}
         {relatedTools.length > 0 && (
