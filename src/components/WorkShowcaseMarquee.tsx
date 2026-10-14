@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { socialMediaProjects } from '../data/portfolioData';
 import type { SocialMediaProject } from '../data/portfolioData';
 
-// Divide the 41 items into three balanced rows for marquee movement
-const row1 = socialMediaProjects.slice(0, 14);
-const row2 = socialMediaProjects.slice(14, 28);
-const row3 = socialMediaProjects.slice(28);
+// Divide the 47 items into three balanced rows for marquee movement
+const row1 = socialMediaProjects.slice(0, 16);
+const row2 = socialMediaProjects.slice(16, 32);
+const row3 = socialMediaProjects.slice(32);
 
 interface WorkShowcaseMarqueeProps {
   locationName?: string;

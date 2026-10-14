@@ -431,6 +431,66 @@ export const socialMediaProjects: SocialMediaProject[] = [
     description: 'Wappx WhatsApp marketing: click-to-WhatsApp ad funnels, auto-reply chatbot setups, customer engagement dashboards, and lead nurturing solutions.',
     results: '+340% increase in customer conversion rates.',
     posts: []
+  },
+  {
+    id: 'namrata-wheels',
+    name: 'Namrata Wheels',
+    niche: 'Automotive & Tyre Care',
+    handle: 'namrata_wheels',
+    cardImage: '/portfolio_cards/card_42.jpg',
+    description: 'Namrata Wheels & Automobiles: tyre replacement campaigns, wheel alignment promotions, festive car care guides, and high-impact automotive social content.',
+    results: '+280% increase in service appointments and store walk-ins.',
+    posts: []
+  },
+  {
+    id: 'weaveroots-handloom',
+    name: 'Weaveroots',
+    niche: 'Handcrafted Sarees & Heritage Wear',
+    handle: 'weaveroots',
+    cardImage: '/portfolio_cards/card_43.jpg',
+    description: 'Weaveroots handloom saree collections: heritage draping showcases, artisanal craftsmanship storytelling, slow-fashion reels, and festive bridal catalogs.',
+    results: '+310% increase in catalog engagement and direct DM sales.',
+    posts: []
+  },
+  {
+    id: 'jewellery-couture-diamonds',
+    name: 'Jewellery',
+    niche: 'Couture Diamond Jewelry',
+    handle: 'jewellery_couture',
+    cardImage: '/portfolio_cards/card_44.jpg',
+    description: 'Couture diamond jewellery campaign: high-contrast bridal editorial aesthetics, rose solitaire displays, diamond choker sets, and fine luxury social curation.',
+    results: '14.2x ROAS on Meta high-ticket diamond collection ads.',
+    posts: []
+  },
+  {
+    id: 'jewellery-bridal-solitaires',
+    name: 'Jewellery',
+    niche: 'Bridal & Solitaire Diamonds',
+    handle: 'jewellery_solitaire',
+    cardImage: '/portfolio_cards/card_45.jpg',
+    description: 'Bridal romance fine jewellery: pastel blue wedding flat-lays, solitaire anniversary rings, statement chandelier earrings, and couple wedding campaigns.',
+    results: '+265% increase in wedding season consultation inquiries.',
+    posts: []
+  },
+  {
+    id: 'real-estate-township-plots',
+    name: 'Real Estate',
+    niche: 'Gated Township & Premium Plots',
+    handle: 'realestate_township',
+    cardImage: '/portfolio_cards/card_46.jpg',
+    description: 'Integrated township and residential plots campaign: airport connectivity highlights, masterplan 3D renders, clubhouse amenity showcases, and high-ROI investor ads.',
+    results: '+390% increase in qualified site-visit lead generation.',
+    posts: []
+  },
+  {
+    id: 'jewellers-royal-heritage',
+    name: 'Jewellers',
+    niche: 'Royal Heritage Gold & Bridal',
+    handle: 'jewellers_heritage',
+    cardImage: '/portfolio_cards/card_47.jpg',
+    description: 'Royal bridal gold & heritage jewellery: deep crimson velvet displays, handcrafted gold choker sets, bridal lookbooks, and luxury wedding jewelry reels.',
+    results: '+330% boost in boutique walk-ins and bridal orders.',
+    posts: []
   }
 ];
 
