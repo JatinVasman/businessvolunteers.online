@@ -232,10 +232,6 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
         <div style={{ position: 'absolute', inset: 0, opacity: 0.05, backgroundImage: 'radial-gradient(#FFF 1px, transparent 1px)', backgroundSize: '24px 24px', pointerEvents: 'none' }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '900px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(255, 78, 39, 0.15)', border: '1px solid rgba(255, 78, 39, 0.35)', color: '#FF4E27', padding: '0.4rem 1.1rem', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.04em', marginBottom: '1.25rem' }}>
-            <span>⚡</span>
-            <span>106 STANDALONE FREE ONLINE TOOLS</span>
-          </div>
 
           <h1 style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, lineHeight: 1.12, letterSpacing: '-0.02em', color: '#FFFFFF', marginBottom: '1.25rem' }}>
             Free Business, Marketing &amp; Seller Utilities
@@ -264,7 +260,7 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
       </section>
 
       {/* SEARCH AND FILTER BAR */}
-      <section style={{ position: 'sticky', top: '70px', zIndex: 90, backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid #E2E8F0', padding: '1rem 0' }}>
+      <section style={{ backgroundColor: '#FFFFFF', borderBottom: '1px solid #E2E8F0', padding: '1.25rem 0' }}>
         <div className="container">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {/* Search Input */}
@@ -291,7 +287,7 @@ export const ToolsPage: React.FC<ToolsPageProps> = ({ toolSlug, onNavigate, onOp
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = '#FF4E27';
-                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 78, 39, 0.15)';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = '#CBD5E1';
